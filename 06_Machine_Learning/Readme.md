@@ -3,6 +3,7 @@ M.Sc. Data Analytics JLU Giessen <br>
 Bearbeitet von: Noorullah Adel  <br>
 Bearbeitungszeit: SoSe 2025 <br>
 ---
+> Das Ziel des Projekts „Santander Customer Transaction Prediction“ ist die Entwicklung eines Machine Learning-Modells, das auf Basis eines gegebenen Datensatzes vorhersagt, ob eine Person eine Finanztransaktion durchführen wird. Der Datensatz, der aus einer Kaggle-Wettbewerb stammt, enthält anonymisierte Finanztransaktionen und wird verwendet, um explorative Datenanalyse und verschiedene Machine-Learning-Verfahren anzuwenden. Dabei sollen verschiedene Modelle trainiert, miteinander verglichen und durch Hyperparameter-Optimierung sowie geeignete Metriken evaluiert werden, um eine möglichst genaue Vorhersage zu erreichen.
 
 ## Advanced Data Analysis - Visualisation | Projektbeschreibung, Quellcode und Erklärung weiter unten (<mark>bitte scrollen<mark>)
 

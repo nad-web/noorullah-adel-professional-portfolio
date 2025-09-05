@@ -4,6 +4,22 @@ Bearbeitet von: Noorullah Adel  <br>
 Bearbeitungszeit: SoSe 2025 <br>
 ---
 
+## Advanced Data Analysis - Visualisation | Projektbeschreibung, Quellcode und Erklärung weiter unten (<mark>bitte scrollen<mark>)
+
+![png](ML_Transaction_Prediction_files/ML_Transaction_Prediction_8_0.png)
+![png](ML_Transaction_Prediction_files/ML_Transaction_Prediction_10_0.png)
+![png](ML_Transaction_Prediction_files/ML_Transaction_Prediction_12_0.png)
+![png](ML_Transaction_Prediction_files/ML_Transaction_Prediction_14_0.png)
+![png](ML_Transaction_Prediction_files/ML_Transaction_Prediction_16_0.png)
+![png](ML_Transaction_Prediction_files/ML_Transaction_Prediction_18_0.png)
+![png](ML_Transaction_Prediction_files/ML_Transaction_Prediction_20_0.png)
+![png](ML_Transaction_Prediction_files/ML_Transaction_Prediction_22_0.png)
+![png](ML_Transaction_Prediction_files/ML_Transaction_Prediction_24_0.png)
+![png](ML_Transaction_Prediction_files/ML_Transaction_Prediction_26_0.png)
+![png](ML_Transaction_Prediction_files/ML_Transaction_Prediction_38_0.png)
+![png](ML_Transaction_Prediction_files/ML_Transaction_Prediction_42_0.png)
+
+---
 
 ```python
 # --- Schritt Nr. 1: Import der benötigten Bibliotheken ---

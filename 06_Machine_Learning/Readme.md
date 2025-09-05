@@ -1,10 +1,8 @@
-
 # Projekt: Santander Customer Transaction Prediction
-### M.SC. Data Analytics JLU Giessen 
-### Bearbeitet von: Noorullah Adel  
-### Bearbeitungszeit: SoSe 2025 
+M.Sc. Data Analytics JLU Giessen <br>
+Bearbeitet von: Noorullah Adel  <br>
+Bearbeitungszeit: SoSe 2025 <br>
 ---
-
 
 
 ```python
@@ -30,22 +28,16 @@ plt.rcParams['figure.figsize'] = (10, 6)
 
 
 # Erläuterungen
-
-## Bibliotheken
-
-### pandas
+Bibliotheken
+* pandas
 Eine Python-Bibliothek zur Manipulation und Analyse strukturierter Daten (DataFrames). Wird verwendet, um den Datensatz zu laden, zu bereinigen und zu untersuchen.
-
-### numpy
+* numpy
 Ermöglicht effiziente numerische Berechnungen mit Arrays und Matrizen – Grundlage für viele ML-Bibliotheken.
-
-### matplotlib.pyplot
+* matplotlib.pyplot
 Die Standard-Bibliothek zur Erstellung von 2D-Diagrammen in Python.
-
-### seaborn
+* seaborn
 Auf `matplotlib` aufbauende Bibliothek für anspruchsvolle statistische Visualisierungen mit modernem Design.
-
-### sklearn (Scikit-Learn)
+* sklearn (Scikit-Learn)
 Eines der wichtigsten ML-Frameworks in Python. Enthält Module für:
 
 - **train_test_split**: Datenaufteilung
@@ -55,28 +47,21 @@ Eines der wichtigsten ML-Frameworks in Python. Enthält Module für:
 - **Pipeline**: Verkettung von Vorverarbeitung und Modell
 - **RandomForestClassifier, LogisticRegression**: ML-Modelle
 - **classification_report, confusion_matrix, roc_auc_score, roc_curve**: Evaluationsmetriken
-
-### xgboost
+* xgboost
 Hochleistungsfähiges Gradient-Boosting-Framework, besonders effektiv bei strukturierten Daten.
-
-### warnings.filterwarnings('ignore')
+* warnings.filterwarnings('ignore')
 Unterdrückt repetitive Warnungen (z.B. von XGBoost), um die Ausgabe übersichtlich zu halten.
-
-## ⚙️ Technische Erklärung
-
-### sns.set(style="whitegrid")
+* ⚙️ Technische Erklärung
+* sns.set(style="whitegrid")
 Setzt das visuelle Theme von Seaborn auf ein helles Raster – verbessert Lesbarkeit.
-
-### plt.rcParams['figure.figsize'] = (10, 6)
+* plt.rcParams['figure.figsize'] = (10, 6)
 Definiert die Standardgröße aller Diagramme, sodass sie gut lesbar sind.
-
-## 🔍 Zweck
+* Zweck
 
 Diese Zelle initialisiert die gesamte technische Umgebung für das Projekt. Ohne diese Imports wäre keine Datenanalyse oder Modellierung möglich. Sie stellt sicher, dass alle benötigten Werkzeuge zur Verfügung stehen.
 
 > arff File Format
 > Falls nicht installiert ist: pip install liac-arff
-
 
 ```python
 # --- Schritt Nr. 2: Laden des Datensatzes im ARFF-Format (korrigiert!) ---
@@ -136,34 +121,28 @@ except Exception as e:
 
 
 # Erklärung
-
-## ARFF-Format
+* ARFF-Format
 **Attribute-Relation File Format**, ein Standard von Weka und OpenML, das Metadaten (z.B. Datentypen) enthält.
-
-### arff.loadarff()
+* arff.loadarff()
 Liest `.arff`-Dateien und gibt `data` (Daten) und `meta` (Metadaten) zurück.
-
-### Bytes vs. Strings
+* Bytes vs. Strings
 In Python 3 werden Strings in ARFF oft als bytes (z.B. `b'True'`) gespeichert. `.decode('utf-8')` wandelt sie in lesbare Strings um.
 
-## ⚙️ Technische Erklärung
+* ⚙️ Technische Erklärung
 
-### Laden mit arff.loadarff()
+* Laden mit arff.loadarff()
 Sichert eine korrekte Interpretation des ARFF-Headers.
-
-### Dekodierung
+* Dekodierung
 Nur Spalten mit `object`-Typ und bytes-Inhalt werden dekodiert.
-
-### Target-Umwandlung
+* Target-Umwandlung
 - `'True' → 1`
 - `'False' → 0`
 
 Dies wird mittels `.map()` erreicht, da `int('True')` fehlschlägt.
-
-### try-except
+* try-except
 Sichert robustes Laden – falls eine lokale Datei fehlt, greift das Programm auf OpenML zurück.
 
-## 🔍 Zweck
+* Zweck
 
 Sicherstellen, dass der Datensatz fehlerfrei geladen, korrekt typisiert und bereit für die Analyse ist. Ohne diese Schritte wäre jede weitere Verarbeitung fehleranfällig.
 
@@ -222,24 +201,23 @@ print(df.describe().T[['mean', 'std', 'min', 'max']].round(3).head(10))  # Nur e
     var_8   0.284  3.333 -10.506  10.151
     var_9   7.567  1.235   3.970  11.151
 
-
 # Definitionen
 
-## .describe()
+* .describe()
 Gibt statistische Kennzahlen (Mittelwert, Standardabweichung, Quantile) für numerische Spalten aus.
 
-## value_counts()
+* value_counts()
 Zählt die Vorkommen von Datentypen.
 
-## ⚙️ Technische Erklärung
+* ⚙️ Technische Erklärung
 
-### .T
+* .T
 Transponiert die Tabelle, was die Lesbarkeit verbessert.
 
-### .head(10)
+* .head(10)
 Zeigt nur die ersten 10 Features an, um die Übersichtlichkeit zu erhöhen.
 
-## 🔍 Zweck
+* Zweck
 
 Erste Diagnose des Datensatzes: 
 - Form
@@ -278,21 +256,21 @@ plt.show()
 
 # Definitionen
 
-## Klassenunbalance
+* Klassenunbalance
 Bezeichnet eine Situation, in der eine Klasse deutlich seltener ist als andere. Im aktuellen Kontext beträgt der Anteil der Minderheitsklasse etwa 10%.
 
-## ROC-AUC
+* ROC-AUC
 Eine geeignete Metrik bei Klassenunbalance, da sie die Fähigkeit eines Modells misst, positive Instanzen von negativen zu unterscheiden, unabhängig von der Klassenverteilung.
 
-## ⚙️ Technische Erklärung
+* ⚙️ Technische Erklärung
 
-### ax.patches
+* ax.patches
 Greift auf die Balken eines Balkendiagramms zu, um Prozentwerte direkt auf den Balken hinzuzufügen.
 
-### annotate()
+* annotate()
 Fügt Text an beliebige Koordinaten im Diagramm hinzu, was hier genutzt wird, um die Balken mit ihren entsprechenden Prozentwerten zu beschriften.
 
-## 🔍 Interpretation
+* Interpretation
 
 Die starke Klassenunbalance erklärt, warum die Genauigkeit (Accuracy) als Bewertungsmaßstab ungeeignet ist. Ein einfaches Modell könnte eine Genauigkeit von über 90% erreichen, indem es einfach immer die Mehrheitsklasse (in diesem Fall 0) vorhersagt. Daher ist es wichtig, alternative Metriken wie ROC-AUC zu verwenden, die die tatsächliche Leistung des Modells bei der Unterscheidung zwischen den Klassen besser widerspiegeln.
 

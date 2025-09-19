@@ -5,6 +5,7 @@ Below is a list of my certifications and completed courses with details and link
 
 | Certificate / Course Name              | Platform/Institution | Completion Date | Credential Link                                  |
 |--------------------------------------|---------------------|-----------------|------------------------------------------------|
+| Fundamentals of Deep Learning    | NVIDIA        | Sep 2025       | [Verify](https://learn.nvidia.com/certificates?id=wdF69CFPTsW39IFa35Zu3Q#)|
 | IBM Business Intelligence (BI) Analyst    | Coursera        | May 2025       | [Verify](https://www.coursera.org/account/accomplishments/professional-cert/S7PHZPPIGYDF)|
 | ASANA Workflow Specialist                | ASANA            | Mar 2025      | [Certificate](https://certifications.asana.com/09f2e303-fab8-4535-acd5-f35085fbdaa5#acc.9F8EQxAT) |
 | IBM IT Project Manager             | Coursera     | Feb 2025      | [Certificate](https://www.coursera.org/account/accomplishments/professional-cert/1WUQOFDWGQBL)       |

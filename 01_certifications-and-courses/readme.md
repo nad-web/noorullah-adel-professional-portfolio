@@ -5,6 +5,7 @@ Below is a list of my certifications and completed courses with details and link
 
 | Certificate / Course Name              | Platform/Institution | Completion Date | Credential Link                                  |
 |--------------------------------------|---------------------|-----------------|------------------------------------------------|
+| IBM Data Engineering    | IBM        | Dec 2025       | [Verify](https://coursera.org/verify/professional-cert/VNESIEOPGY28)|
 | Rapid Application Development with Large Language Models (LLMs)    | NVIDIA        | Sep 2025       | [Verify](https://learn.nvidia.com/certificates?id=k4zyHt1PSauUrtVDez0_gQ#)|
 | Fundamentals of Deep Learning    | NVIDIA        | Sep 2025       | [Verify](https://learn.nvidia.com/certificates?id=wdF69CFPTsW39IFa35Zu3Q#)|
 | IBM Business Intelligence (BI) Analyst    | Coursera        | May 2025       | [Verify](https://www.coursera.org/account/accomplishments/professional-cert/S7PHZPPIGYDF)|
